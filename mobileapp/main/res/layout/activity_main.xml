@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="360dp"
+        android:layout_height="197dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="69dp">
+
+        <EditText
+            android:id="@+id/editImie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Imię" />
+
+        <EditText
+            android:id="@+id/editNazwisko"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Nazwisko" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/labelStanowisko"
+                android:layout_width="166dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Stanowisko:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="166dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/labelDane"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dane pracownika"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="45dp" />
+
+    <TextView
+        android:id="@+id/labelHaslo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Generowanie hasła"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="254dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelHaslo"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/labelIle"
+                android:layout_width="215dp"
+                android:layout_height="36dp"
+                android:text="Ile znaków?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <EditText
+                android:id="@+id/editTextNumberDecimal"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/checkCase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Małe i wielkie litery" />
+
+        <CheckBox
+            android:id="@+id/checkCyfry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cyfry" />
+
+        <CheckBox
+            android:id="@+id/checkSpecjalne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Znaki specjalne" />
+
+        <Button
+            android:id="@+id/generujHaslo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Generuj hasło" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/zapisz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zatwierdź"
+        tools:layout_editor_absoluteX="157dp"
+        tools:layout_editor_absoluteY="610dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
